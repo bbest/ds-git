@@ -1,7 +1,7 @@
 ---
 title: 'git & github'
-author: 'ben best for ucsb data science'
-date: 2015-07-16
+author: 'ben best | ucsb data science'
+date: 2015-07-16 | [bbest.github.io/ds-git](http://bbest.github.io/ds-git)
 ---
 
 # introduction
@@ -99,12 +99,9 @@ interactive map with zoom, click on details, [OpenStreetMap](http://www.openstre
 1. [Create pages](https://help.github.com/articles/creating-pages-with-the-automatic-generator/)
     - Have fun picking a theme!
 
-. . .
-
-This is how we created the website for the **ucsb-data-science**:
-
-- _edit_: [https://github.com/ucsb-data-science/ucsb-data-science.github.io](https://github.com/ucsb-data-science/ucsb-data-science.github.io)
-- _view_: [http://ucsb-data-science.github.io](http://ucsb-data-science.github.io)
+- This is how we created the website for the **ucsb-data-science**:
+    - _edit_: [github.com/ucsb-data-science/ucsb-data-science.github.io](https://github.com/ucsb-data-science/ucsb-data-science.github.io)
+    - _view_: [ucsb-data-science.github.io](http://ucsb-data-science.github.io)
 
 ## ex 2: fork & pull a repo
 
@@ -124,9 +121,11 @@ This is how we created the website for the **ucsb-data-science**:
     1. Edit files. For the sake of testing, create a new file `[user].txt` where `[user]` is your Github username. We'll start with each of us editing different files so as to avoid [merge conflicts](https://help.github.com/articles/resolving-merge-conflicts/).
     1. [Commit](https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio) changes and push
 
-# extra: this presentation, md to html slideshow via pandoc
+# extra
 
-This presentation was created in markdown and rendered as an HTML slideshow with [pandoc](http://pandoc.org). Details: [Producing slide shows with Pandoc](http://pandoc.org/demo/example9/producing-slide-shows-with-pandoc.html). To render the HTML, the content was placed in the github pages **gh-pages** branch of the ds-git repo.
+## md to html slideshow
+
+This presentation was created in markdown and rendered as an HTML slideshow with [pandoc](http://pandoc.org). Details: [Producing slide shows with Pandoc](http://pandoc.org/demo/example9/producing-slide-shows-with-pandoc.html). To render the HTML, the content was placed in the **gh-pages** branch of the [ds-git](https://github.com/bbest/ds-git) repo.
 
 Here's some code to get the idea:
 
@@ -142,13 +141,22 @@ git checkout -b gh-pages
 # create document index.md in editor like http://atom.io
 
 # convert from markdown (*.md) to html slidy with options
-pandoc -t slidy --self-contained --incremental --slide-level=2 --css=octicons/octicons.css index.md -o index.html
+pandoc \
+  -t slidy \
+  --self-contained --incremental --slide-level=2 \
+  --css=octicons/octicons.css \
+  index.md \
+  -o index.html
+
+# check status, note untracked files
+git status
 
 # add files for git tracking, and commit changes locally
 git add *
+git commit -m 'initial presentation'
 
-# push to remote
-
+# push branch to remote
+git push -u origin gh-pages
 ```
 
 To see all the pandoc options:
@@ -157,4 +165,9 @@ To see all the pandoc options:
 pandoc --help
 ```
 
-## Resources
+Also [set the default branch](https://help.github.com/articles/setting-the-default-branch/) to gh-pages, since master not otherwise being used.
+
+## further resources
+
+- [Good Resources for Learning Git and GitHub](https://help.github.com/articles/good-resources-for-learning-git-and-github/)
+- [Git and GitHub with RStudio](http://r-pkgs.had.co.nz/git.html)
