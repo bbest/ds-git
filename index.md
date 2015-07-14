@@ -1,6 +1,6 @@
 ---
-title: 'git & github'
-author: 'ben best | ucsb data science'
+title: git & github
+author: ben best | [ucsb data science](http://ucsb-data-science.github.io/)
 date: 2015-07-16 | [bbest.github.io/ds-git](http://bbest.github.io/ds-git)
 ---
 
