@@ -186,7 +186,7 @@ ben best | ucsb data science
 </ul>
 </div><div id="ex-2-fork-pull-a-repo" class="slide section level2">
 <h1>ex 2: fork &amp; pull a repo</h1>
-<p><span class="mega-octicon octicon-repo-forked"></span> Fork the <a href="stevejbrown/rss_article_recommender">https://github.com/stevejbrown/rss_article_recommender</a> repo.</p>
+<p><span class="mega-octicon octicon-repo-forked"></span> Fork the repo <a href="https://github.com/stevejbrown/rss_article_recommender">stevejbrown/rss_article_recommender</a>.</p>
 <ol class="incremental" style="list-style-type: decimal">
 <li><a href="https://help.github.com/articles/set-up-git/">Set up git</a> if you haven't already
 <ul class="incremental">
@@ -234,8 +234,11 @@ ben best | ucsb data science
 <span class="kw">git</span> add *
 <span class="kw">git</span> commit -m <span class="st">'initial presentation'</span>
 
-<span class="co"># push branch to remote</span>
-<span class="kw">git</span> push origin gh-pages</code></pre>
+<span class="co"># push, set remote and upstream (1x)</span>
+<span class="kw">git</span> push -u origin gh-pages
+
+<span class="co"># push (after 1x)</span>
+<span class="kw">git</span> push</code></pre>
 <p>To see all the pandoc options:</p>
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">pandoc</span> --help</code></pre>
 <p>Also <a href="https://help.github.com/articles/setting-the-default-branch/">set the default branch</a> to gh-pages, since master not otherwise being used.</p>
