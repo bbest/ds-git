@@ -105,7 +105,7 @@ interactive map with zoom, click on details, [OpenStreetMap](http://www.openstre
 
 ## ex 2: fork & pull a repo
 
-<span class="mega-octicon octicon-repo-forked"></span> Fork the [https://github.com/stevejbrown/rss_article_recommender](stevejbrown/rss_article_recommender) repo.
+<span class="mega-octicon octicon-repo-forked"></span> Fork the repo [stevejbrown/rss_article_recommender](https://github.com/stevejbrown/rss_article_recommender).
 
 1. [Set up git](https://help.github.com/articles/set-up-git/) if you haven't already
     - git + github applications recommended
@@ -155,8 +155,11 @@ git status
 git add *
 git commit -m 'initial presentation'
 
-# push branch to remote
+# push, set remote and upstream (1x)
 git push -u origin gh-pages
+
+# push (after 1x)
+git push
 ```
 
 To see all the pandoc options:
