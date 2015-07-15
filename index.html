@@ -51,6 +51,10 @@ ben best | <a href="http://ucsb-data-science.github.io/">ucsb data science</a>
 </ul></li>
 <li>exercises
 <ol class="incremental" style="list-style-type: decimal">
+<li>hello world
+<ul class="incremental">
+<li><code>http://github.com/[user]/hello-world</code></li>
+</ul></li>
 <li>create a website repo
 <ul class="incremental">
 <li><code>http://[user].github.io</code></li>
@@ -70,17 +74,36 @@ ben best | <a href="http://ucsb-data-science.github.io/">ucsb data science</a>
 <li><strong>collaborate</strong> with others</li>
 <li><strong>publish</strong> to free web site</li>
 </ul>
-</div><div id="workflow" class="slide section level2">
-<h1>workflow</h1>
+</div><div id="example-workflow" class="slide section level2">
+<h1>example workflow</h1>
 <ol class="incremental" style="list-style-type: decimal">
 <li><strong>sign up</strong> at github.com <em>(1x/user)</em></li>
 <li><strong>install</strong> git <em>(1x/machine)</em></li>
-<li><strong>create</strong> (or <strong>fork</strong>) a repository, aka &quot;repo&quot; <em>(1x/repo)</em></li>
+<li><strong>create</strong> [or <strong>fork</strong>] a repository, aka &quot;repo&quot; <em>(1x/repo)</em></li>
 <li><strong>clone</strong> from web to your local desktop <em>(1x/repo)</em></li>
+<li>[<strong>branch</strong> copy for isolated development of a feature <em>(1x/feature)</em></li>
 <li><strong>commit</strong> changes locally</li>
 <li><strong>push</strong> changes to your repo</li>
-<li>(<strong>pull request</strong> changes from your repo to 'upstream' repo)</li>
+<li>[<strong>pull request</strong> changes from your repo to source repo that was forked)]</li>
 </ol>
+</div><div id="models-of-development" class="slide section level2">
+<h1>models of development</h1>
+<ul class="incremental">
+<li><strong>fork &amp; pull</strong>: open-source / big teams
+<ul class="incremental">
+<li>fork a source repo (<strong>read only</strong>)</li>
+<li>push changes to a personal repo</li>
+<li>pull request to commit to a source repo</li>
+</ul></li>
+<li><strong>shared</strong>: small teams
+<ul class="incremental">
+<li>push changes directly to a repo (<strong>read + write</strong>)</li>
+</ul></li>
+<li><strong>branching</strong>: sandbox changes with either of above modes
+<ul class="incremental">
+<li>See <a href="https://guides.github.com/introduction/flow/">flow</a></li>
+</ul></li>
+</ul>
 </div><div id="fork-pull-model" class="slide section level2">
 <h1>fork &amp; pull model</h1>
 <table>
@@ -103,15 +126,21 @@ ben best | <a href="http://ucsb-data-science.github.io/">ucsb data science</a>
 <td align="left"><span class="mega-octicon octicon-arrow-down" +></span></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left"><span class="mega-octicon octicon-arrow-down" +></span> <a href="https://help.github.com/articles/create-a-repo/#commit-your-first-change"><strong>commit</strong></a> <span class="mega-octicon octicon-git-commit" +></span></td>
+<td align="left"><span class="mega-octicon octicon-arrow-down" +></span> <a href="http://git-scm.com/docs/git-commit"><strong>commit</strong></a> <span class="mega-octicon octicon-git-commit" +></span></td>
 </tr>
 <tr class="odd">
+<td align="left"><span class="mega-octicon octicon-arrow-down" +></span></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><span class="mega-octicon octicon-arrow-down" +></span> <a href="https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/"><strong>branch</strong></a> <span class="mega-octicon octicon-git-branch" +></span></td>
+</tr>
+<tr class="even">
 <td align="left"><span class="mega-octicon octicon-arrow-left" +></span></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left"><span class="mega-octicon octicon-arrow-left" +></span> <a href="https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio"><strong>push</strong></a> <span class="mega-octicon octicon-cloud-upload" +></span></td>
+<td align="left"><span class="mega-octicon octicon-arrow-left" +></span> <a href="https://help.github.com/articles/pushing-to-a-remote/"><strong>push</strong></a> <span class="mega-octicon octicon-cloud-upload" +></span></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><span class="mega-octicon octicon-arrow-left" +></span></td>
 <td align="left"><a href="https://help.github.com/articles/merging-a-pull-request"><strong>merge</strong></a> <span class="mega-octicon octicon-git-merge" +></span></td>
 <td align="left"><span class="mega-octicon octicon-arrow-left" +></span> <a href="https://help.github.com/articles/creating-a-pull-request/"><strong>pull request</strong></a> <span class="mega-octicon octicon-git-pull-request" +></span></td>
@@ -130,8 +159,8 @@ ben best | <a href="http://ucsb-data-science.github.io/">ucsb data science</a>
 <ul class="incremental">
 <li>track changes, issues, etc. free for public repos</li>
 <li>max: 1GB per repo, 100MB per file. so larger files (and binary) on file server, with remote vpn option</li>
-<li>render <a href="https://help.github.com/articles/github-flavored-markdown/">markdown</a>, eg README.md</li>
-<li>special rendering of various popular file formats</li>
+<li>render <a href="https://guides.github.com/features/mastering-markdown/">markdown</a>, eg <code>README.md</code></li>
+<li>special rendering of various popular file formats (txt/md, png/jpg, csv/tsv, geojson/topojson) ...</li>
 </ul>
 </div><div id="github-rendering-text" class="slide section level2">
 <h1>github rendering: text</h1>
@@ -163,11 +192,17 @@ ben best | <a href="http://ucsb-data-science.github.io/">ucsb data science</a>
 <script src="data:text/javascript;charset=utf-8,document%2Ewrite%28%22%3Ciframe%20height%3D%5C%27420%5C%27%20width%3D%5C%27620%5C%27%20frameborder%3D%5C%270%5C%27%20src%3D%5C%27https%3A%2F%2Frender%2Egithubusercontent%2Ecom%2Fview%2Fgeojson%3Furl%3Dhttps%3A%2F%2Fraw%2Egithubusercontent%2Ecom%2Fdatasets%2Fgeodata%2Fmaster%2Ftopojson%2Fus%5Fstates%2Etopojson%5C%27%3E%3C%5C%2Fiframe%3E%22%29%0A"></script>
 <p>interactive map with zoom, click on details, <a href="http://www.openstreetmap.org">OpenStreetMap</a></p>
 </div>
-<div id="exercises" class="titleslide slide section level1"><h1>exercises</h1></div><div id="ex-1-create-a-website-repo" class="slide section level2">
-<h1>ex 1: create a website repo</h1>
-<p><span class="mega-octicon octicon-file-code"></span> Create a website repository in Github. You only need a web browser (no git required).</p>
+<div id="exercises" class="titleslide slide section level1"><h1>exercises</h1></div><div id="ex-1-hello-world" class="slide section level2">
+<h1>ex 1: hello world</h1>
+<p><span class="mega-octicon octicon-mark-github"></span> Create a hello-world repository and tour some of Github's most useful features. You only need a web browser and Github account (no git or other desktop software required).</p>
 <ol class="incremental" style="list-style-type: decimal">
-<li><a href="https://help.github.com/articles/signing-up-for-a-new-github-account/">Sign up</a> for a new GitHub account</li>
+<li><p><a href="https://help.github.com/articles/signing-up-for-a-new-github-account/">Sign up</a> for a new GitHub account</p></li>
+<li><p>Follow the GitHub Guide <a href="https://guides.github.com/activities/hello-world/">Hello World</a> to walk through essentials of: repositories, branches, commits, issues and pull requests.</p></li>
+</ol>
+</div><div id="ex-2-create-a-website-repo" class="slide section level2">
+<h1>ex 2: create a website repo</h1>
+<p><span class="mega-octicon octicon-file-code"></span> Create a website repository in Github. You only need a web browser and Github account (no git or other desktop software required).</p>
+<ol class="incremental" style="list-style-type: decimal">
 <li><a href="https://help.github.com/articles/create-a-repo/">Create repo</a> <code>[user].github.io</code>, where <code>[user]</code> is your github username
 <ul class="incremental">
 <li><a href="https://help.github.com/articles/create-a-repo/#commit-your-first-change">Commit your first change</a> on README.md</li>
@@ -184,8 +219,8 @@ ben best | <a href="http://ucsb-data-science.github.io/">ucsb data science</a>
 <li><em>view</em>: <a href="http://ucsb-data-science.github.io">ucsb-data-science.github.io</a></li>
 </ul></li>
 </ul>
-</div><div id="ex-2-fork-pull-a-repo" class="slide section level2">
-<h1>ex 2: fork &amp; pull a repo</h1>
+</div><div id="ex-3-fork-pull-a-repo" class="slide section level2">
+<h1>ex 3: fork &amp; pull a repo</h1>
 <p><span class="mega-octicon octicon-repo-forked"></span> Fork the repo <a href="https://github.com/stevejbrown/rss_article_recommender">stevejbrown/rss_article_recommender</a>.</p>
 <ol class="incremental" style="list-style-type: decimal">
 <li><a href="https://help.github.com/articles/set-up-git/">Set up git</a> if you haven't already
@@ -201,15 +236,15 @@ ben best | <a href="http://ucsb-data-science.github.io/">ucsb data science</a>
 <span class="kw">git</span> clone https://github.com/[user]/rss_article_recommender.git
 <span class="kw">cd</span> rss_article_recommender</code></pre></li>
 <li>Edit files. For the sake of testing, create a new file <code>[user].txt</code> where <code>[user]</code> is your Github username. We'll start with each of us editing different files so as to avoid <a href="https://help.github.com/articles/resolving-merge-conflicts/">merge conflicts</a>.</li>
-<li><p><a href="https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio">Commit</a> changes and push</p></li>
+<li><p><a href="https://guides.github.com/activities/forking/#making-changes">Commit</a> changes and push</p></li>
 </ol></li>
 </ol>
 </div>
 <div id="extra" class="titleslide slide section level1"><h1>extra</h1></div><div id="md-to-html-slideshow" class="slide section level2">
 <h1>md to html slideshow</h1>
-<p>This presentation was created in markdown and rendered as an HTML slideshow with <a href="http://pandoc.org">pandoc</a>. Details: <a href="http://pandoc.org/demo/example9/producing-slide-shows-with-pandoc.html">Producing slide shows with Pandoc</a>. To render the HTML, the content was placed in the <strong>gh-pages</strong> branch of the <a href="https://github.com/bbest/ds-git">ds-git</a> repo.</p>
+<p>This presentation was created in markdown (see <a href="https://github.com/bbest/ds-git/blob/gh-pages/index.md">index.md</a>) and rendered as an HTML slideshow with <a href="http://pandoc.org">pandoc</a>. Details: <a href="http://pandoc.org/demo/example9/producing-slide-shows-with-pandoc.html">Producing slide shows with Pandoc</a>. To render the HTML, the content was placed in the <strong>gh-pages</strong> branch of the <a href="https://github.com/bbest/ds-git">ds-git</a> repo.</p>
 <p>Here's some code to get the idea:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># clone freshly made &quot;ds-git&quot; repository to local machine</span>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># clone &quot;ds-git&quot; repository made on github.com to local machine</span>
 <span class="kw">cd</span> ~/github
 <span class="kw">git</span> clone https://github.com/bbest/ds-git.git
 
@@ -232,9 +267,9 @@ ben best | <a href="http://ucsb-data-science.github.io/">ucsb data science</a>
 
 <span class="co"># add files for git tracking, and commit changes locally</span>
 <span class="kw">git</span> add *
-<span class="kw">git</span> commit -m <span class="st">'initial presentation'</span>
+<span class="kw">git</span> commit -a -m <span class="st">'initial presentation'</span>
 
-<span class="co"># push, set remote and upstream (1x)</span>
+<span class="co"># push to remote, set upstream (1x)</span>
 <span class="kw">git</span> push -u origin gh-pages
 
 <span class="co"># push (after 1x)</span>
@@ -245,7 +280,13 @@ ben best | <a href="http://ucsb-data-science.github.io/">ucsb data science</a>
 </div><div id="further-resources" class="slide section level2">
 <h1>further resources</h1>
 <ul class="incremental">
-<li><a href="https://help.github.com/articles/good-resources-for-learning-git-and-github/">Good Resources for Learning Git and GitHub</a></li>
+<li><a href="https://help.github.com/articles/good-resources-for-learning-git-and-github/">Good Resources for Learning Git and GitHub</a>
+<ul class="incremental">
+<li><a href="https://guides.github.com/">GitHub Guides</a>
+<ul class="incremental">
+<li><a href="https://guides.github.com/activities/citable-code/">Making Your Code Citable</a></li>
+</ul></li>
+</ul></li>
 <li><a href="http://r-pkgs.had.co.nz/git.html">Git and GitHub with RStudio</a></li>
 </ul>
 </div>

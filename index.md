@@ -15,6 +15,8 @@ date: 2015-07-16 | [bbest.github.io/ds-git](http://bbest.github.io/ds-git)
     - github features
 
 1. exercises
+    1. hello world
+        - `http://github.com/[user]/hello-world`
     1. create a website repo
         - `http://[user].github.io`
     1. fork & pull a repo
@@ -27,22 +29,37 @@ date: 2015-07-16 | [bbest.github.io/ds-git](http://bbest.github.io/ds-git)
 - **collaborate** with others
 - **publish** to free web site
 
-## workflow
+## example workflow
 1. **sign up** at github.com _(1x/user)_
 1. **install** git _(1x/machine)_
-1. **create** (or **fork**) a repository, aka "repo" _(1x/repo)_
+1. **create** [or **fork**] a repository, aka "repo" _(1x/repo)_
 1. **clone** from web to your local desktop _(1x/repo)_
+1. [**branch** copy for isolated development of a feature _(1x/feature)_
 1. **commit** changes locally
 1. **push** changes to your repo
-1. (**pull request** changes from your repo to 'upstream' repo)
+1. [**pull request** changes from your repo to source repo that was forked)]
+
+## models of development
+
+- **fork & pull**: open-source / big teams
+    - fork a source repo (**read only**)
+    - push changes to a personal repo
+    - pull request to commit to a source repo
+
+- **shared**: small teams
+    - push changes directly to a repo (**read + write**)
+
+- **branching**: sandbox changes with either of above modes
+    - See [flow](https://guides.github.com/introduction/flow/)
 
 ## fork & pull model
 
 |       | `github.com/[user0]/[repo]` <br> (orig, web)  | `github.com/[user]/[repo]` <br> (you, web) |   `~/github/[repo]` <br> (you, local) |
 |-------|-----------------------------------------------|--------------------------------------------|---------------------------------------|
 | <span  + class="mega-octicon octicon-arrow-right"></span> (1x) |         | <span  + class="mega-octicon octicon-arrow-right"></span> [**fork**](https://help.github.com/articles/fork-a-repo) <span  + class="mega-octicon octicon-repo-forked"></span> | <span  + class="mega-octicon octicon-arrow-right"></span> [**clone**](https://help.github.com/articles/fetching-a-remote) <span  + class="mega-octicon octicon-cloud-download"></span> |
-| <span  + class="mega-octicon octicon-arrow-down"></span>   |                                               |          | <span  + class="mega-octicon octicon-arrow-down"></span> [**commit**](https://help.github.com/articles/create-a-repo/#commit-your-first-change) <span  + class="mega-octicon octicon-git-commit"></span> |
-| <span  + class="mega-octicon octicon-arrow-left"></span>    |                                               |             | <span  + class="mega-octicon octicon-arrow-left"></span> [**push**](https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio) <span  + class="mega-octicon octicon-cloud-upload"></span> |
+| <span  + class="mega-octicon octicon-arrow-down"></span>   |                                               |          | <span  + class="mega-octicon octicon-arrow-down"></span> [**commit**](http://git-scm.com/docs/git-commit) <span  + class="mega-octicon octicon-git-commit"></span> |
+| <span  + class="mega-octicon octicon-arrow-down"></span>   |                                               |          | <span  + class="mega-octicon octicon-arrow-down"></span> [**branch**](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/) <span  + class="mega-octicon octicon-git-branch"></span> |
+| <span  + class="mega-octicon octicon-arrow-left"></span>    |                                               |             | <span  + class="mega-octicon octicon-arrow-left"></span> [**push**](https://help.github.com/articles/pushing-to-a-remote/) <span  + class="mega-octicon octicon-cloud-upload"></span> |
 | <span  + class="mega-octicon octicon-arrow-left"></span>    | [**merge**](https://help.github.com/articles/merging-a-pull-request) <span  + class="mega-octicon octicon-git-merge"></span> | <span  + class="mega-octicon octicon-arrow-left"></span> [**pull request**](https://help.github.com/articles/creating-a-pull-request/) <span  + class="mega-octicon octicon-git-pull-request"></span> | |
 
 where:
@@ -55,8 +72,8 @@ where:
 
 - track changes, issues, etc. free for public repos
 - max: 1GB per repo, 100MB per file. so larger files (and binary) on file server, with remote vpn option
-- render [markdown](https://help.github.com/articles/github-flavored-markdown/), eg README.md
-- special rendering of various popular file formats
+- render [markdown](https://guides.github.com/features/mastering-markdown/), eg `README.md`
+- special rendering of various popular file formats (txt/md, png/jpg, csv/tsv, geojson/topojson) ...
 
 ## github rendering: text
 
@@ -89,11 +106,18 @@ interactive map with zoom, click on details, [OpenStreetMap](http://www.openstre
 
 # exercises
 
-## ex 1: create a website repo
+## ex 1: hello world
 
-<span class="mega-octicon octicon-file-code"></span> Create a website repository in Github. You only need a web browser (no git required).
+<span class="mega-octicon octicon-mark-github"></span>  Create a hello-world repository and tour some of Github's most useful features. You only need a web browser and Github account (no git or other desktop software required).
 
 1. [Sign up](https://help.github.com/articles/signing-up-for-a-new-github-account/) for a new GitHub account
+
+1. Follow the GitHub Guide [Hello World](https://guides.github.com/activities/hello-world/) to walk through essentials of: repositories, branches, commits, issues and pull requests.
+
+## ex 2: create a website repo
+
+<span class="mega-octicon octicon-file-code"></span> Create a website repository in Github.  You only need a web browser and Github account (no git or other desktop software required).
+
 1. [Create repo](https://help.github.com/articles/create-a-repo/) `[user].github.io`, where `[user]` is your github username
     - [Commit your first change](https://help.github.com/articles/create-a-repo/#commit-your-first-change) on README.md
 1. [Create pages](https://help.github.com/articles/creating-pages-with-the-automatic-generator/)
@@ -103,7 +127,7 @@ interactive map with zoom, click on details, [OpenStreetMap](http://www.openstre
     - _edit_: [github.com/ucsb-data-science/ucsb-data-science.github.io](https://github.com/ucsb-data-science/ucsb-data-science.github.io)
     - _view_: [ucsb-data-science.github.io](http://ucsb-data-science.github.io)
 
-## ex 2: fork & pull a repo
+## ex 3: fork & pull a repo
 
 <span class="mega-octicon octicon-repo-forked"></span> Fork the repo [stevejbrown/rss_article_recommender](https://github.com/stevejbrown/rss_article_recommender).
 
@@ -119,18 +143,18 @@ interactive map with zoom, click on details, [OpenStreetMap](http://www.openstre
         cd rss_article_recommender
         ```
     1. Edit files. For the sake of testing, create a new file `[user].txt` where `[user]` is your Github username. We'll start with each of us editing different files so as to avoid [merge conflicts](https://help.github.com/articles/resolving-merge-conflicts/).
-    1. [Commit](https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio) changes and push
+    1. [Commit](https://guides.github.com/activities/forking/#making-changes) changes and push
 
 # extra
 
 ## md to html slideshow
 
-This presentation was created in markdown and rendered as an HTML slideshow with [pandoc](http://pandoc.org). Details: [Producing slide shows with Pandoc](http://pandoc.org/demo/example9/producing-slide-shows-with-pandoc.html). To render the HTML, the content was placed in the **gh-pages** branch of the [ds-git](https://github.com/bbest/ds-git) repo.
+This presentation was created in markdown (see [index.md](https://github.com/bbest/ds-git/blob/gh-pages/index.md)) and rendered as an HTML slideshow with [pandoc](http://pandoc.org). Details: [Producing slide shows with Pandoc](http://pandoc.org/demo/example9/producing-slide-shows-with-pandoc.html). To render the HTML, the content was placed in the **gh-pages** branch of the [ds-git](https://github.com/bbest/ds-git) repo.
 
 Here's some code to get the idea:
 
 ```bash
-# clone freshly made "ds-git" repository to local machine
+# clone "ds-git" repository made on github.com to local machine
 cd ~/github
 git clone https://github.com/bbest/ds-git.git
 
@@ -153,9 +177,9 @@ git status
 
 # add files for git tracking, and commit changes locally
 git add *
-git commit -m 'initial presentation'
+git commit -a -m 'initial presentation'
 
-# push, set remote and upstream (1x)
+# push to remote, set upstream (1x)
 git push -u origin gh-pages
 
 # push (after 1x)
@@ -173,4 +197,6 @@ Also [set the default branch](https://help.github.com/articles/setting-the-defau
 ## further resources
 
 - [Good Resources for Learning Git and GitHub](https://help.github.com/articles/good-resources-for-learning-git-and-github/)
+    - [GitHub Guides](https://guides.github.com/)
+        - [Making Your Code Citable](https://guides.github.com/activities/citable-code/)
 - [Git and GitHub with RStudio](http://r-pkgs.had.co.nz/git.html)
