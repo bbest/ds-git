@@ -34,7 +34,7 @@ date: 2015-07-16 | [bbest.github.io/ds-git](http://bbest.github.io/ds-git)
 1. **install** git _(1x/machine)_
 1. **create** [or **fork**] a repository, aka "repo" _(1x/repo)_
 1. **clone** from web to your local desktop _(1x/repo)_
-1. [**branch** copy for isolated development of a feature _(1x/feature)_
+1. [**branch** copy for isolated development of a feature _(1x/feature)_]
 1. **commit** changes locally
 1. **push** changes to your repo
 1. [**pull request** changes from your repo to source repo that was forked)]
